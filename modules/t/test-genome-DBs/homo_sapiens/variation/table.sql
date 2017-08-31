@@ -462,6 +462,7 @@ CREATE TABLE `structural_variation_sample` (
   `structural_variation_sample_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `structural_variation_id` int(10) unsigned NOT NULL,
   `sample_id` int(10) unsigned DEFAULT NULL,
+  `zygosity` enum('homozygous','heterozygous') DEFAULT NULL,
   PRIMARY KEY (`structural_variation_sample_id`),
   KEY `structural_variation_idx` (`structural_variation_id`),
   KEY `sample_idx` (`sample_id`)
